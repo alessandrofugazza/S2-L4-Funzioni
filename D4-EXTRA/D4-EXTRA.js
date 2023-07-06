@@ -216,6 +216,15 @@ f(testDate);
  "10","11","12"]
 */
 
-// const matrixGenerator = function (x, y) {
+const matrixGenerator = function (x, y) {
+  const matrix = [];
+  for (let i = 0; i < y; i++) {
+    for (let j = 0; j < x; j++) {
+      const cell = i.toString() + j.toString();
+      matrix.push(cell);
+    }
+  }
+  console.log(matrix);
+};
 
-// }
+matrixGenerator(4, 3);
