@@ -195,9 +195,18 @@ console.log(emailContent(testString));
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
 
-// const f = function (date) {
+const f = function (date) {
+  const currentDate = new Date();
+  const currentMs = Date.parse(currentDate);
+  const dateMs = Date.parse(date);
+  const msDifference = currentMs - dateMs;
+  const daysDifference = msDifference / 86400000;
+  console.log(Math.floor(daysDifference));
+};
 
-// }
+const testDate = new Date("2022-07-03");
+
+f(testDate);
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due numeri interi, "x" e "y".
